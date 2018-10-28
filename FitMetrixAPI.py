@@ -1,12 +1,11 @@
 import requests
 import data
 
-def login(session):
-    querystring = {"locationID": data.locationID}
-    payload = "USERNAME=%s&PASSWORD=%s&LocationID=%s&REMEMBERME=true" % (data.username, data.password, data.locationID)
-    headers = {'content-type': "application/x-www-form-urlencoded", 'Connection' :'keep-alive'}
+def login(session, usr, pw):
+    querystring = {"locationID":"5044"}
+    payload = "USERNAME={}&PASSWORD={}&LocationID=5044&REMEMBERME=true".format(usr, pw)
+    headers = {'content-type': "application/x-www-form-urlencoded", 'cache-control': "no-cache"}
     response = session.post(data.login_url, data=payload, headers=headers, params=querystring)
-    print('logged in!')
     return response
 
 def get_schedule(session, start, end):

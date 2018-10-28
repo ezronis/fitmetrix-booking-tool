@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 
 # gets todays date and a week from today
-def get_dates_today():
+def get_thiswk_dates():
     today = datetime.datetime.today()
     nextWk = today + datetime.timedelta(days=6)
     wkstart = today.strftime('%m/%d/%Y')
@@ -12,13 +12,24 @@ def get_dates_today():
     print('today: ' + wkstart + '\n next week: ' + wkend)
     return wkstart, wkend
 
-def get_dates(year, month, day):
+def get_todays_date():
+    today = datetime.datetime.today()
+    today = today.strftime('%m/%d/%Y')
+    return today
+
+def get_dates(year, month, day, delta):
     today = datetime.date(year, month, day)
     nextWk = today + datetime.timedelta(days=6)
     wkstart = today.strftime('%m/%d/%Y')
     wkend = nextWk.strftime('%m/%d/%Y')
     print('today: ' + wkstart + '\n next week: ' + wkend)
     return wkstart, wkend
+
+def get_date(year, month, day):
+    day = datetime.date(year, month, day)
+    day = day.strftime('%m/%d/%Y')
+    print('day: ' + day)
+    return day
 
 def get_vip_date(year, month, day, delta):
     today = datetime.date(year, month, day)
@@ -48,10 +59,14 @@ def get_apptids(data):
             apptids.append(match.group(groupNum))
     return apptids
 
-def get_class_index(html_file, class_name):
-    with open(html_file) as file:
-        data = file.read()
-
+def get_class_index(html, class_name):
+    # if html is a file, the split will return an array of ['filename', ''] (size is 2)
+    if len(html.split('.html')) > 1:
+        with open(html) as file:
+            data = file.read()
+    # else, html is the content of a request
+    else:
+        data = html
     # creating soup reading schedule
     soup = BeautifulSoup(data, 'html.parser')
 
@@ -66,7 +81,6 @@ def get_class_index(html_file, class_name):
 
     # getting all positions that class Code Red exits in class_names array
     x = [i for i, n in enumerate(class_names) if n == class_name]
-    print(x)
     return x
 
 def get_html_title(data):

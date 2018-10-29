@@ -3,6 +3,7 @@ import browsercookie
 import FitMetrixAPI as fmAPI
 import utils
 import data
+import creds
 from bs4 import BeautifulSoup
 
 # grabbing cookies from chrome browser
@@ -13,11 +14,11 @@ s = requests.Session()
 #s.cookies = cj
 
 # logging in and printing title of html response
-l = fmAPI.login(s, data.username, data.password)
+l = fmAPI.login(s, creds.username, creds.password)
 print(utils.get_html_title(l.content))
 
 # iterating through class names in classes array
-for keys, values in data.practice.items():
+for keys, values in data.classes.items():
     # getting schedule
     day = utils.get_vip_date(2018, 10, 31, keys)
     sched = fmAPI.get_schedule(s, day, day)
@@ -45,3 +46,4 @@ for keys, values in data.practice.items():
                     print('apptid:' + str(apptid))
                     booking = fmAPI.book_spot1(s, apptid, data.spot)
                     print(utils.get_html_title(booking.content))
+print('classes have been booked!')

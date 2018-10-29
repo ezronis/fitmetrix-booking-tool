@@ -1,28 +1,23 @@
 # Fitmetrix Booking Tool ![Logo of the project](https://static.wixstatic.com/media/ebb8ab_f881ca6210334ed4b072e76742a47950~mv2.png/v1/fill/w_108,h_108,al_c,q_80,usm_0.66_1.00_0.01/ebb8ab_f881ca6210334ed4b072e76742a47950~mv2.webp)
-
-# Name of the project
-> Additional information or tagline
-
-A brief description of your project, what it is used for and how does life get
-awesome when someone starts to use it.
+> Book a spot for any fitness class!
+Don't you love beating out your gym frenemie on the best spot in class? This script will allow you to programattically book any spot for any class if your gym uses the Fitmetrix API. 
 
 ## Installing / Getting started
 
-A quick introduction of the minimal setup you need to get a hello world up &
-running.
+A quick introduction of the minimal setup you need to get this up & running.
 
 ```shell
-packagemanager install awesome-project
-awesome-project start
-awesome-project "Do something!"  # prints "Nah."
+vim creds.py
+# add username and password objects with strings assigned
+# update data.py dictionary "classes" with desired classnames by day
+python3 app.py
 ```
-
-Here you should say what actually happens when you execute the code above.
+Make sure to update the creds.py file with your username and password, as well as the classes dictionary with the desired classes by day.
 
 ### Initial Configuration
-
-Some projects require initial configuration (e.g. access tokens or keys, `npm i`).
-This is the section where you would document those requirements.
+```
+pip3 install -r requirements.txt
+``
 
 ## Developing
 
@@ -30,37 +25,12 @@ Here's a brief intro about what a developer must do in order to start developing
 the project further:
 
 ```shell
-git clone https://github.com/your/awesome-project.git
-cd awesome-project/
-packagemanager install
+git clone https://github.com/ezronis/fitmetrix-booking-tool.git
+cd fitmetrix-booking-tool/
+pip3 install -r requirements.txt
 ```
 
 And state what happens step-by-step.
-
-### Building
-
-If your project needs some additional steps for the developer to build the
-project after some code changes, state them here:
-
-```shell
-./configure
-make
-make install
-```
-
-Here again you should state what actually happens when the code above gets
-executed.
-
-### Deploying / Publishing
-
-In case there's some step you have to take that publishes this project to a
-server, this is the right time to state it.
-
-```shell
-packagemanager deploy awesome-project -s server.com -u username -p password
-```
-
-And again you'd need to tell what the previous code actually does.
 
 ## Features
 
@@ -68,29 +38,6 @@ What's all the bells and whistles this project can perform?
 * What's the main functionality
 * You can also do another thing
 * If you get really randy, you can even do this
-
-## Configuration
-
-Here you should write what are all of the configurations a user can enter when
-using the project.
-
-#### Argument 1
-Type: `String`  
-Default: `'default value'`
-
-State what an argument does and how you can use it. If needed, you can provide
-an example below.
-
-Example:
-```bash
-awesome-project "Some other value"  # Prints "You're nailing this readme!"
-```
-
-#### Argument 2
-Type: `Number|Boolean`  
-Default: 100
-
-Copy-paste as many of these as you need.
 
 ## Contributing
 
@@ -126,9 +73,4 @@ links to humans using your project. You can include links like:
 
 
 ## Licensing
-
-One really important part: Give your project a proper license. Here you should
-state what the license is and how to find the text version of the license.
-Something like:
-
 "The code in this project is licensed under MIT license."

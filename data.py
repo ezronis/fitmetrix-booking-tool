@@ -11,10 +11,9 @@ classes = {
     0 : ['Yves-Volution', 'Dance Fusion Jazz Edition', 'Code Red'], 
     1 : ['Code Red'],
     4 : ['Super Sculpt', 'Dance Fusion'],
-    5 : ['Early Bird', 'Dance Fusion', 'Code Red'],
-    6 : ['Zumba Fitness', 'Code Red']
+    5 : ['Early Bird', 'Dance Fusion']
 }
 practice = {
     0 : ['Bootcamp', 'Urban Groove Therapy'],
-    1 : ['Ikky Sculpt', 'Zumba Toning ']
+    1 : ['Code Red ', 'Zumba Toning ']
 }

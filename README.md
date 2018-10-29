@@ -1,4 +1,4 @@
-![Logo of the project](https://static.wixstatic.com/media/ebb8ab_f881ca6210334ed4b072e76742a47950~mv2.png/v1/fill/w_108,h_108,al_c,q_80,usm_0.66_1.00_0.01/ebb8ab_f881ca6210334ed4b072e76742a47950~mv2.webp)
+# Fitmetrix Booking Tool ![Logo of the project](https://static.wixstatic.com/media/ebb8ab_f881ca6210334ed4b072e76742a47950~mv2.png/v1/fill/w_108,h_108,al_c,q_80,usm_0.66_1.00_0.01/ebb8ab_f881ca6210334ed4b072e76742a47950~mv2.webp)
 
 # Name of the project
 > Additional information or tagline

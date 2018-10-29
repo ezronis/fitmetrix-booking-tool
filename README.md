@@ -1,4 +1,4 @@
-# Fitmetrix Booking Tool ![Logo of the project](https://static.wixstatic.com/media/ebb8ab_f881ca6210334ed4b072e76742a47950~mv2.png/v1/fill/w_108,h_108,al_c,q_80,usm_0.66_1.00_0.01/ebb8ab_f881ca6210334ed4b072e76742a47950~mv2.webp)
+# Fitmetrix Booking Tool
 > Book a spot for any fitness class!
 Don't you love beating out your gym frenemie on the best spot in class? This script will allow you to programattically book any spot for any class if your gym uses the Fitmetrix API. 
 

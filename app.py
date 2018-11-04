@@ -20,7 +20,7 @@ print(utils.get_html_title(l.content))
 # iterating through class names in classes array
 for keys, values in data.classes.items():
     # getting schedule
-    day = utils.get_vip_date(2018, 10, 31, keys)
+    day = utils.get_vip_date(2018, 11, 12, keys)
     sched = fmAPI.get_schedule(s, day, day)
     '''
     # creating record of schedule for requested date range

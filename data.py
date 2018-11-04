@@ -8,10 +8,10 @@ booking_url2 = "https://www.fitmetrix.io/WebPortal/saveProfileAppt"
 booking_url1 = "https://www.fitmetrix.io/WebPortal/SchedulePayment/d0b9fcb4-5aaa-e811-a974-9602e5420515/"
 
 classes = {
-    0 : ['Yves-Volution', 'Dance Fusion Jazz Edition', 'Code Red'], 
-    1 : ['Code Red'],
-    4 : ['Super Sculpt', 'Dance Fusion'],
-    5 : ['Early Bird', 'Dance Fusion']
+    4 : ['Super Sculpt', 'Dance Fusion '],
+    5 : ['Early Bird', 'Dance Fusion '],
+    0 : ['Yves-Volution', 'Dance Fusion Jazz Edition '], 
+    1 : ['Code Red']
 }
 practice = {
     0 : ['Bootcamp', 'Urban Groove Therapy'],
